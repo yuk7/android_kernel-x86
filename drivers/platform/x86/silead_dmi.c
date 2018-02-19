@@ -445,6 +445,22 @@ static const struct dmi_system_id silead_ts_dmi_table[] = {
 		},
 	},
 	{
+		/* Chuwi Hi8 Dual OS 206 */
+		.driver_data = (void *)&chuwi_hi8_data,
+		.matches = {
+			DMI_MATCH(DMI_SYS_VENDOR, "Insyde"),
+			DMI_MATCH(DMI_BIOS_VERSION, "H1D_S806_206"),
+		},
+	},
+	{
+		/* Chuwi Hi8 Dual OS 207 */
+		.driver_data = (void *)&chuwi_hi8_data,
+		.matches = {
+			DMI_MATCH(DMI_SYS_VENDOR, "Insyde"),
+			DMI_MATCH(DMI_BIOS_VERSION, "H1D_S806_207"),
+		},
+	},
+	{
 		/* Chuwi Vi8 (CWI506) */
 		.driver_data = (void *)&chuwi_vi8_data,
 		.matches = {
