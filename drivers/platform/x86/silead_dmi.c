@@ -504,8 +504,7 @@ static void silead_ts_dmi_add_props(struct i2c_client *client)
 	struct device *dev = &client->dev;
 	int error;
 
-	if (has_acpi_companion(dev) &&
-	    !strncmp(silead_ts_data->acpi_name, client->name, I2C_NAME_SIZE)) {
+	if (has_acpi_companion(dev)) {
 		error = device_add_properties(dev, silead_ts_data->properties);
 		if (error)
 			dev_err(dev, "failed to add properties: %d\n", error);
